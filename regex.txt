@@ -1,0 +1,56 @@
+- Lista de páginas wiki:
+
+ArchLinux: https://wiki.archlinux.org/
+Gentoo: https://wiki.gentoo.org/wiki/Main_Page
+CentOS: http://wiki.centos.org/
+Debian: https://wiki.debian.org/
+Ubuntu: https://wiki.ubuntu.com/
+
+- Fechas de lanzamiento:
+
+Arch Linux: 11-03-2002
+Gentoo: 31/03/2002
+CentOs: 14-05-2004 03:32:38
+Debian: 16/08/1993
+Ubuntu: 20/10/2004
+
+Desde Linux RegularExp.
+
++1.4412351512
+-12
+12.5
+i_saraf@uco.com
+
+255.245.19.09
+eje1
+egrep --colour '[+-][0-9]+(\.[1-9])?' regex.txt
+
+eje2
+egrep --colour '[0-9]+\.[1-9]{5,}' regex.txt
+
+eje3
+egrep --colour '[a-z0-9_-]+(\.[a-z0-9_-]+)*@[a-z0-9-]+(\.[a-z0-9_-]+)*(\.[a-z]{2,4})' regex.txt
+
+eje4 todos los numeros entre 25 y 75
+egrep --colour '2[5-9]|[3-6][0-9]|7[0-5]' regex.txt
+
+eje5 todos los numero entre 342 y 749
+
+egrep --colour '34[1-9]|3[5-9][0-9]|[4-6][0-9][0-9]|7[0-4][0-9]' regex.txt
+
+eje6 detecta ip
+
+egrep --colour '[0-1][0-9][0-9]|2[0-4][0-9]|25[0-5]\.[0-1][0-9][0-9]|2[0-4][0-9]|25[0-5]\.[0-1][0-9][0-9]|2[0-4][0-9]|25[0-5]\.[0-1][0-9][0-9]|2[0-4][0-9]|25[0-5] ' regex.txt
+
+eje7 fecha
+
+
+egrep --colour '[0-2][1-0]|[1-2]0|3[0-1](\/-)0[1-9]|1[0-2]\1 2[0-9]{3}'
+
+eje sed
+
+df | sed -r -n '2,$ s/([^ ]+)[ ]+([^ ]+)[ ]+([^ ]+)[ ]+([^ ]+)[ ]+([^ ]+)[ ]+([^ ]+)/el fichero de bloques \1 montado en \6 tiene usado \3 bloques de un total de \2 (\5)/p'
+
+df | egrep --colour '([^ ]+)[ ]+([^ ]+)[ ]+([^ ]+)[ ]+([^ ]+)[ ]+([^ ]+)[ ]+([^ ]+)'
+
+
